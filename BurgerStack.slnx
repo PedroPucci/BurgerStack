@@ -1,3 +1,8 @@
 <Solution>
+  <Project Path="BurgerStack.Application/BurgerStack.Application.csproj" />
+  <Project Path="BurgerStack.Domain/BurgerStack.Domain.csproj" />
+  <Project Path="BurgerStack.Infrastracture/BurgerStack.Infrastracture.csproj" />
+  <Project Path="BurgerStack.Shared/BurgerStack.Shared.csproj" />
   <Project Path="BurgerStack/BurgerStack.csproj" />
+  <Project Path="BurguerStack.Tests/BurguerStack.Tests.csproj" />
 </Solution>
