@@ -1,5 +1,6 @@
 ﻿using BurgerStack.Application.ExtensionsErrors;
 using BurgerStack.Application.Services.Interfaces;
+using BurgerStack.Domain.Dto;
 using BurgerStack.Domain.Entity;
 using BurgerStack.Infrastracture.Repository.RepositoryUoW;
 
@@ -14,12 +15,12 @@ namespace BurgerStack.Application.Services
             _repositoryUoW = repositoryUoW;
         }
 
-        public Task<Result<OrderEntity>> Add(OrderEntity orderEntity)
+        public Task<Result<OrderEntity>> Add(OrderCreateRequest orderCreateRequest)
         {
             throw new NotImplementedException();
         }
 
-        public Task Delete(int id)
+        public Task<Result<bool>> Delete(int id)
         {
             throw new NotImplementedException();
         }
@@ -34,7 +35,7 @@ namespace BurgerStack.Application.Services
             throw new NotImplementedException();
         }
 
-        public Task<Result<OrderEntity>> Update(int id, OrderEntity orderEntity)
+        public Task<Result<OrderEntity>> Update(int id, OrderUpdateRequest orderUpdateRequest)
         {
             throw new NotImplementedException();
         }
