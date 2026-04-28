@@ -1,5 +1,6 @@
 ﻿using BurgerStack.Application.UnitOfWork;
 using BurgerStack.Domain.Dto;
+using BurgerStack.Domain.Entity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BurgerStack.Controllers
@@ -56,7 +57,7 @@ namespace BurgerStack.Controllers
         }
 
         [HttpGet("all")]
-        [ProducesResponseType(typeof(List<OrderResponse>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(List<OrderEntity>), StatusCodes.Status200OK)]
         public async Task<IActionResult> Get()
         {
             var result = await _uow.OrderService.Get();
@@ -64,7 +65,7 @@ namespace BurgerStack.Controllers
         }
 
         [HttpGet("{id:int}")]
-        [ProducesResponseType(typeof(OrderResponse), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(OrderEntity), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {

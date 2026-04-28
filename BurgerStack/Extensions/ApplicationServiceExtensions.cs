@@ -26,7 +26,7 @@ namespace BurgerStack.Extensions
                 opt.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "API Teste",
+                    Title = "API BurgerStack",
                     Description = @"
                         A **API BurgerStack** é uma solução para gerenciamento de pedidos de uma lanchonete.
 

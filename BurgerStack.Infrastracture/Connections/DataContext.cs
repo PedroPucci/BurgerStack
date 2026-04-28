@@ -19,11 +19,5 @@ namespace BurgerStack.Infrastracture.Connections
         }
 
         public DbSet<OrderEntity> Order { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-            DataModelConfiguration.ConfigureModels(modelBuilder);
-        }
     }
 }

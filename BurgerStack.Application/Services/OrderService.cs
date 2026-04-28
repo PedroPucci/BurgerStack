@@ -5,7 +5,6 @@ using BurgerStack.Domain.Entity;
 using BurgerStack.Infrastracture.Repository.RepositoryUoW;
 using BurgerStack.Shared.Logging;
 using BurgerStack.Shared.Validator;
-using Microsoft.AspNetCore.Identity;
 using Serilog;
 
 namespace BurgerStack.Application.Services
