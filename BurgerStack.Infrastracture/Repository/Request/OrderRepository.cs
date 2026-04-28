@@ -1,7 +1,7 @@
-﻿using BurgerStack.Domain.Dto;
-using BurgerStack.Domain.Entity;
+﻿using BurgerStack.Domain.Entity;
 using BurgerStack.Domain.Interfaces.Repository;
 using BurgerStack.Infrastracture.Connections;
+using Microsoft.EntityFrameworkCore;
 
 namespace BurgerStack.Infrastracture.Repository.Request
 {
@@ -14,29 +14,37 @@ namespace BurgerStack.Infrastracture.Repository.Request
             _context = context;
         }
 
-        public Task<OrderCreateRequest> Add(OrderCreateRequest orderCreateRequest)
+        public async Task<OrderEntity> Add(OrderEntity orderEntity)
         {
-            throw new NotImplementedException();
+            var result = await _context.Order.AddAsync(orderEntity);
+            await _context.SaveChangesAsync();
+
+            return result.Entity;
         }
 
-        public OrderEntity Delete(int id)
+        public OrderEntity Delete(OrderEntity orderEntity)
         {
-            throw new NotImplementedException();
+            var response = _context.Order.Remove(orderEntity);
+            return response.Entity;
         }
 
-        public Task<List<OrderEntity>> Get()
+        public async Task<List<OrderEntity>> Get()
         {
-            throw new NotImplementedException();
+            return await _context.Order.ToListAsync();
         }
 
-        public Task<OrderEntity?> GetById(int? id)
+        public async Task<OrderEntity?> GetById(int? id)
         {
-            throw new NotImplementedException();
+            if (id == null)
+                return null;
+
+            return await _context.Order.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public OrderEntity Update(OrderUpdateRequest OrderUpdateRequest)
+        public OrderEntity Update(OrderEntity orderEntity)
         {
-            throw new NotImplementedException();
+            var response = _context.Order.Update(orderEntity);
+            return response.Entity;
         }
     }
 }

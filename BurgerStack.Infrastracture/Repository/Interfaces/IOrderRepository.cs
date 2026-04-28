@@ -1,13 +1,12 @@
-﻿using BurgerStack.Domain.Dto;
-using BurgerStack.Domain.Entity;
+﻿using BurgerStack.Domain.Entity;
 
 namespace BurgerStack.Domain.Interfaces.Repository
 {
     public interface IOrderRepository
     {
-        Task<OrderCreateRequest> Add(OrderCreateRequest orderCreateRequest);
-        OrderEntity Update(OrderUpdateRequest OrderUpdateRequest);
-        OrderEntity Delete(int id);
+        Task<OrderEntity> Add(OrderEntity orderEntity);
+        OrderEntity Update(OrderEntity orderEntity);
+        OrderEntity Delete(OrderEntity orderEntity);
         Task<List<OrderEntity>> Get();
         Task<OrderEntity?> GetById(int? id);
     }
