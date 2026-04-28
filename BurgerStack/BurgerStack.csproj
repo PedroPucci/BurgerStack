@@ -27,8 +27,4 @@
     <ProjectReference Include="..\BurgerStack.Application\BurgerStack.Application.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>
