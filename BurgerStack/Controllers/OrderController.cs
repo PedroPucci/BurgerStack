@@ -55,7 +55,7 @@ namespace BurgerStack.Controllers
             return NoContent();
         }
 
-        [HttpGet]
+        [HttpGet("all")]
         [ProducesResponseType(typeof(List<OrderResponse>), StatusCodes.Status200OK)]
         public async Task<IActionResult> Get()
         {

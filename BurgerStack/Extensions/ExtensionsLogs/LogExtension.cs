@@ -6,7 +6,7 @@ namespace BurgerStack.Extensions.ExtensionsLogs
 {
     public class LogExtension
     {
-        private static readonly string LogDirectory = "C://Users//User//Downloads//logs";
+        private static readonly string LogDirectory = "C://Users//Pedro//Downloads//logs";
 
         static LogExtension()
         {
