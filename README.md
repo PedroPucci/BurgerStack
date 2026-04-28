@@ -127,14 +127,14 @@ Biblioteca utilizada para crição de testes unitário com Xunit e Moq:
 
 ---
 ## **Decisões de Arquitetura**
-1.Foi adotada uma arquitetura em camadas (API, Application, Domain, Infrastructure e Shared) para garantir separação de responsabilidades, organização do código e facilidade de manutenção.
-2.Utilização do padrão Unit of Work, permitindo o controle de transações de forma centralizada e consistente.
-3.Implementação de Repository Pattern para abstração do acesso a dados, desacoplando a lógica de negócio do banco.
-4.Uso de DTOs (Data Transfer Objects) para evitar exposição direta das entidades do domínio.
-5.Adoção do FluentValidation para centralizar e organizar regras de validação.
-6.Uso do Result<T> para padronizar retornos de sucesso e erro entre os serviços.
-7.Implementação de logs com Serilog, facilitando rastreamento de erros e monitoramento da aplicação.
-8.Separação da camada Shared para reutilização de validações, enums e helpers.
+1. Foi adotada uma arquitetura em camadas (API, Application, Domain, Infrastructure e Shared) para garantir separação de responsabilidades, organização do código e facilidade de manutenção.
+2. Utilização do padrão Unit of Work, permitindo o controle de transações de forma centralizada e consistente.
+3. Implementação de Repository Pattern para abstração do acesso a dados, desacoplando a lógica de negócio do banco.
+4. Uso de DTOs (Data Transfer Objects) para evitar exposição direta das entidades do domínio.
+5. Adoção do FluentValidation para centralizar e organizar regras de validação.
+6. Uso do Result<T> para padronizar retornos de sucesso e erro entre os serviços.
+7. Implementação de logs com Serilog, facilitando rastreamento de erros e monitoramento da aplicação.
+8. Separação da camada Shared para reutilização de validações, enums e helpers.
 
 ---
 ## **O que foi deixado de fora (Melhorias futuras)**
